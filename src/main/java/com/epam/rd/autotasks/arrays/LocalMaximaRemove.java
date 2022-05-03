@@ -16,15 +16,24 @@ public class LocalMaximaRemove {
         for (int i = 0; i<copy.length; i++){
             if (i==0){
                 if (copy[i]>copy[i+1]){
-                    copy = LocalMaximaRemove.removeItem(copy, i);
+                    for (int y = i; y < copy.length-1; y++){
+                        copy[y]=copy[y+1];
+                    }
+                    copy=Arrays.copyOf(copy, copy.length-1);
                 }
             } else if (i==copy.length-1){
                 if (copy[i]>copy[i-1]){
-                    copy = LocalMaximaRemove.removeItem(copy, i);
+                    for (int y = i; y < copy.length-1; y++){
+                        copy[y]=copy[y+1];
+                    }
+                    copy=Arrays.copyOf(copy, copy.length-1);
                 }
             } else{
                 if (copy[i]>copy[i+1]){
-                    copy = LocalMaximaRemove.removeItem(copy, i);
+                    for (int y = i; y < copy.length-1; y++){
+                        copy[y]=copy[y+1];
+                    }
+                    copy=Arrays.copyOf(copy, copy.length-1);
                 }
             }
         }
@@ -32,11 +41,5 @@ public class LocalMaximaRemove {
         //put your code here
 
         //throw new UnsupportedOperationException();
-    }
-    public static int[] removeItem(int[] values, int index){
-    for (int i = index; i < values.length -1; i++) {
-        values[i] = values[i + 1];
-    }
-    return Arrays.copyOf(values, values.length - 1);
     }
 }
