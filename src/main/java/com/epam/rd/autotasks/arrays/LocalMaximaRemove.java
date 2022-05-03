@@ -16,15 +16,15 @@ public class LocalMaximaRemove {
         for (int i = 0; i<copy.length; i++){
             if (i==0){
                 if (copy[i]>copy[i+1]){
-                    copy = Example.removeItem(copy, i);
+                    copy = LocalMaximaRemove.removeItem(copy, i);
                 }
             } else if (i==copy.length-1){
                 if (copy[i]>copy[i-1]){
-                    copy = Example.removeItem(copy, i);
+                    copy = LocalMaximaRemove.removeItem(copy, i);
                 }
             } else{
                 if (copy[i]>copy[i+1]){
-                    copy = Example.removeItem(copy, i);
+                    copy = LocalMaximaRemove.removeItem(copy, i);
                 }
             }
         }
