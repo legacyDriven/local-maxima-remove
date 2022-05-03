@@ -38,5 +38,5 @@ public class LocalMaximaRemove {
         values[i] = values[i + 1];
     }
     return Arrays.copyOf(values, values.length - 1);
-
+    }
 }
